@@ -30,7 +30,6 @@ public class StudentGroup implements StudentArrayOperation {
 			for(int i=0;i<students.length;i++)
 				return students[i];
 		}
-		// Add your implementation here
 		return null;
 	}
 
@@ -52,9 +51,6 @@ public class StudentGroup implements StudentArrayOperation {
 		catch(IllegalArgumentException e) {
 			System.out.println("Caught"+e.getMessage());
 		}
-		
-		
-		// Add your implementation here
 	}
 
 	@Override
@@ -66,8 +62,6 @@ public class StudentGroup implements StudentArrayOperation {
 		catch(IllegalArgumentException e) {
 			System.out.println("Caught"+e.getMessage());
 		}
-		
-		// Add your implementation here
 		return null;
 	}
 
@@ -81,8 +75,6 @@ public class StudentGroup implements StudentArrayOperation {
 		catch(IllegalArgumentException e) {
 			System.out.println("Caught"+e.getMessage());
 		}
-		
-		// Add your implementation here
 	}
 
 	@Override
@@ -98,8 +90,6 @@ public class StudentGroup implements StudentArrayOperation {
 		catch(IllegalArgumentException e) {
 			System.out.println("Caught"+e.getMessage());
 		}
-		
-		// Add your implementation here
 	}
 
 	@Override
@@ -113,7 +103,6 @@ public class StudentGroup implements StudentArrayOperation {
 		catch(IllegalArgumentException e) {
 			System.out.println("caught"+e.getMessage());
 		}
-		// Add your implementation here
 	}
 
 	@Override
@@ -129,8 +118,7 @@ public class StudentGroup implements StudentArrayOperation {
 		catch(IllegalArgumentException e) {
 			System.out.println("Caught"+e.getMessage());
 		}
-		
-		// Add your implementation here
+	
 	}
 
 	@Override
@@ -149,7 +137,7 @@ public class StudentGroup implements StudentArrayOperation {
 		catch(IllegalArgumentException e) {
 			System.out.println("Caught"+e.getMessage());
 		}
-		// Add your implementation here
+		
 	}
 
 	@Override
@@ -164,7 +152,7 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		catch(IllegalArgumentException e)
 			System.out.println("student not exist" + e.getMessage())
-		// Add your implementation here
+	
 	}
 
 	@Override
@@ -282,10 +270,14 @@ public class StudentGroup implements StudentArrayOperation {
 		try {
 			if(firstDate==null||lastDate==null)
 				throw new IllegalArgumentException;
+			for(int i=0;i<students.length;i++) {
+				if(students.birthDate>firstDate && students.birthDate<lastDate)
+					return students[i];
+			}
 		}
 		catch(IllegalArgumentException e)
 			System.out.println("Caught"+e.getMessage());
-		// Add your implementation here
+		
 		return null;
 	}
 
@@ -297,7 +289,7 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		catch(IllegalArgumentException e)
 			System.out.println("Caught"+e.getMessage());
-		// Add your implementation here
+		
 		return null;
 	}
 
@@ -309,13 +301,12 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		catch(IllegalArgumentException e)
 			System.out.println("Caught"+e.getMessage());
-		// Add your implementation here
-		return 0;
+			return 0;
 	}
 
 	@Override
 	public Student[] getStudentsByAge(int age) {
-		// Add your implementation here
+	
 		return null;
 	}
 
